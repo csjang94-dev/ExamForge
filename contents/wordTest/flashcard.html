@@ -4,29 +4,57 @@
   <meta charset="UTF-8">
   <title>AWS 개념 플래시카드</title>
   <link rel="stylesheet" href="flashcard.css">
+  <link rel="stylesheet" href="../init/_colors.css">
 </head>
 <body>
+  <div class="container">
 
-  <h1>AWS 개념 플래시카드</h1>
+    <header class="header">
+      <div class="header_div">
+        <p>AWS 개념 플래시카드</p>
+      </div>
+    </header>
 
-  <div id="card">
-    <div class="face front">
-      <h2 id="question">이 서비스는 무엇일까요?</h2>
-      <p id="desc"></p>
-    </div>
-    <div class="face back">
-      <h2 id="answer"></h2>
-    </div>
+    <nav class="nav">
+      <div class="nav_div">
+        <ul class="nav_ul_item">
+          <li class="nav_li_items"><a href="../mainPage/mainPage.html">메인</a></li>
+          <li class="nav_li_items"><a href="../sampleQuestions/">기출문제</a></li>
+          <li class="nav_li_items"><a href="../wordTest/flashcard.html">단어테스트</a></li>
+          <li class="nav_li_items"><a href="https://aws.amazon.com/ko/certification/certification-prep/testing/">시험예약</a></li>
+          <li class="nav_li_items"><a href="discount.html">할인</a></li>
+          <li class="nav_li_items"><a href="support.html">고객센터</a></li>
+          <li class="nav_li_items"><a href="../login/login.html">로그인</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <section class="section">
+      <div class="section_card">
+        <div class="face front">
+          <h2 class="question">이 서비스는 무엇일까요?</h2>
+        </div>
+        <div class="face back">
+          <h2 class="answer"></h2>
+        </div>
+      </div>
+
+      <div class="section_btn">
+        <div class="controls">
+          <button class="prevBtn">◀ 이전</button>
+          <button class="flipBtn">정답 보기</button>
+          <button class="nextBtn">다음 ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer_div">
+        <p>Copyright © 2025 [team: ExamForge]</p>        
+      </div>
+    </footer>
+    
   </div>
-
-  <div id="controls">
-    <button id="prevBtn">◀ 이전</button>
-    <button id="flipBtn">정답 보기</button>
-    <button id="nextBtn">다음 ▶</button>
-  </div>
-
-  <div id="completeMessage">🎉 모든 카드를 학습했습니다!</div>
-
   <script src="flashcard.js"></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+/* 사이트 컬러 템플릿 */
+
+/* color init */
+:root {
+        --bg-body: #fff;
+        --bg-header: #141f2e;
+        --bg-nav: #cda3e0;
+        --bg-section: #fff;
+        --bg-footer: #141f2e;
+
+        --text-body: #141f2e;
+        --text-header: #fff;
+        --text-nav: #5562d2;
+        --text-section: #141f2e;
+        --text-footer: #fff;
+        
+        --accent: #e8ff47;
+        --accent-dim: #c4d93c;
+        
+        --border: #222222;
+
+        --hover-nav: #fff;
+        --hover-btn: #0afd02;
+        --hover-btn-text: #141f2e;
+}
