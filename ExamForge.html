@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <title>프로젝트: ExamForge (2025.10.27 - 2025.11.02)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    :root{
+      --main-border-color : #EFF5D2;
+      --main-title-color : #C6D870;
+      --main-font-color : #8FA31E;
+      --contents-font-color : #556B2F;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f4f8;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .slide {
+      background: #FFFFFF;
+      padding: 30px 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--main-title-color);
+      margin: 0 0 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 3px solid var(--main-border-color);
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--main-title-color);
+      margin: 25px 0 12px 0;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--main-border-color);
+    }
+
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--main-title-color);
+      margin: 15px 0 8px 0;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--contents-font-color);
+      margin: 0 0 10px 0;
+    }
+
+    ul {
+      margin: 0 0 15px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--contents-font-color);
+      margin-bottom: 6px;
+    }
+
+    strong {
+      color: var(--contents-font-color);
+      font-weight: 600;
+    }
+
+    /* 메타 그리드 */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .meta-item {
+      background: #f7fafc;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--main-border-color);
+      text-align: center;
+    }
+
+    .meta-label {
+      font-size: 12px;
+      color: var(--contents-font-color);
+      margin-bottom: 5px;
+    }
+
+    .meta-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--contents-font-color);
+    }
+
+    /* 기술 스택 그리드 */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .tech-item {
+      background: #edf2f7;
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--contents-font-color);
+      text-align: center;
+    }
+
+    /* 성과 배지 */
+    .achievements {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 15px 0;
+    }
+
+    .achievement-badge {
+      background: #e2e8f0;
+      color: var(--contents-font-color);
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* 기능 그리드 */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .feature-item {
+      background: #f7fafc;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--main-border-color);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: var(--main-font-color);
+    }
+
+    .feature-item p {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--contents-font-color);
+      margin: 0;
+    }
+
+    /* 아키텍처 박스 */
+    .architecture-box {
+      background: #1a202c;
+      color: #e2e8f0;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      line-height: 1.4;
+      white-space: pre;
+      margin: 15px 0;
+      overflow-x: auto;
+    }
+
+    /* 프로토콜 그리드 */
+    .protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .protocol-item {
+      background: #edf2f7;
+      padding: 12px;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .protocol-icon {
+      font-size: 20px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .protocol-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--contents-font-color);
+    }
+
+    /* 스크린샷 그리드 */
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .screenshot-item {
+      height: 180px;
+      border-radius: 8px;
+      border: 2px solid var(--main-border-color);
+      background: #f7fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--contents-font-color);
+      font-size: 14px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .screenshot-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Phase 그리드 */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .phase-item {
+      background: #f7fafc;
+      padding: 15px;
+      border-radius: 8px;
+      border-top: 4px solid var(--main-border-color);
+    }
+
+    .phase-item strong {
+      display: block;
+      font-size: 13px;
+      color: var(--main-font-color);
+      margin-bottom: 6px;
+    }
+
+    .phase-item p {
+      font-size: 12px;
+      color: var(--contents-font-color);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* 상세 섹션 */
+    .detail-block {
+      background: #f7fafc;
+      padding: 15px 20px;
+      border-radius: 8px;
+      margin: 10px 0;
+      border-left: 4px solid var(--main-border-color);
+    }
+
+    .detail-block h3 {
+      margin: 0 0 8px 0;
+      color: var(--main-font-color);
+    }
+
+    .detail-block p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    /* 페이지 번호 */
+    .page-number {
+      text-align: center;
+      font-size: 12px;
+      color: var(--contents-font-color);
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid var(--main-border-color);
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      .meta-grid,
+      .tech-grid,
+      .protocol-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .features-grid,
+      .phase-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .screenshot-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .screenshot-item {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- 페이지 1: 개요 -->
+  <div class="slide">
+    <h1> ExamForge (2025.10.27 - 2025.11.02)</h1>
+    
+    <div class="meta-grid">
+      <div class="meta-item">
+        <div class="meta-label">기간</div>
+        <div class="meta-value">7일</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">팀 구성</div>
+        <div class="meta-value">2인</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">역할</div>
+        <div class="meta-value">[팀장] 문서화 / Terraform(IaC) / CI/CD</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">완성도</div>
+        <div class="meta-value">70%</div>
+      </div>
+    </div>
+
+    <h2> 프로젝트 개요</h2>
+    <p>
+      AWS 자격증 시험 대비 실전 모의고사 플랫폼 입니다. 
+      AWS MediaLive로 RTMP 입력을 HLS로 변환하고, CloudFront CDN을 통해 전세계 200+ 엣지 로케이션으로 HTTPS 배포합니다. 
+      Terraform IaC로 전체 인프라를 자동화하여 빠른 배포 가능 간편한 유지보수.
+    </p>
+
+    <h2> 핵심 기능</h2>
+    <ul>
+      <li><strong>ALB</strong> - 트래픽 분산 및 고가용성, HTTPS 인증서 통합 관리</li>
+      <li><strong>ECS</strong> - 컨테이너 오케스트레이션 배포 자동화 및 관리 용이</li>
+      <li><strong>Fargate</strong> - ECS에 서버리스 Fargate 사용 오버헤드 감소</li>
+      <li><strong>GitHub</strong> - 버전 관리를 통해 장애시 빠른 복구</li>
+      <li><strong>Terraform</strong> - 인프라 구축 자동화 및 유지보수</li>
+    </ul>
+
+    <h2> 기술 스택</h2>
+    <div class="tech-grid">
+      <div class="tech-item">FrontEnd </div>
+      <div class="tech-item">BackEnd</div>
+      <div class="tech-item">CI/CD</div>
+      <div class="tech-item">Terraform (IaC)</div>
+      <div class="tech-item">AWS ECS</div>
+      <div class="tech-item">AWS Fargate</div>
+      <div class="tech-item">AWS DynamoDB</div>
+      <div class="tech-item">AWS CloudWatch</div>
+    </div>
+
+    <h2> 프로젝트 스크린샷</h2>
+    <div class="screenshot-grid">
+      <div class="screenshot-item"><img src="./역할분배.jpg" alt=""></div>
+      <div class="screenshot-item"><img src="./업무스탭.jpg" alt=""></div>
+      <div class="screenshot-item"><img src="./로그인.jpg" alt=""></div>
+      <div class="screenshot-item"><img src="./테라폼.jpg" alt=""></div>
+      <div class="screenshot-item"><img src="./깃허브액션.jpg" alt=""></div>
+      <div class="screenshot-item"><img src="./DB테이블.jpg" alt=""></div>
+    </div>
+
+    <h2> 성과</h2>
+    <div class="achievements">
+      <div class="achievement-badge">✅ CI/CD 파이프라인</div>
+      <div class="achievement-badge">✅ 인프라 자동화</div>
+      <div class="achievement-badge">✅ 팀원과의 업무 분배 경험</div>
+      <div class="achievement-badge">✅ GitHub 버전 관리에 대한 이해</div>
+    </div>
+
+    <div class="page-number">1 / 2</div>
+  </div>
+
+  <!-- 페이지 2: 아키텍처 & 상세 구현 -->
+  <div class="slide">
+    <h1>ExamForge - 인프라 설계</h1>
+
+    <h2> 시스템 아키텍처</h2>
+    <div class="architecture-box"><img src="./전체 아키텍처 최종.png" alt=""></div>
+    <h2> 테라폼 트리구조</h2>
+    <div class="architecture-box"><img src="./테라폼트리구조.png" alt=""></div>
+
+    <h2> 상세 구현 내용</h2>
+    
+    <div class="detail-block">
+      <h3>FrontEnd</h3>
+      <p>정적 컨텐츠 제작 HTML, CSS, JavaScript (박대복)</p>
+    </div>
+
+    <div class="detail-block">
+      <h3>BackEnd</h3>
+      <p>Node.js를 이용한 Docker 이미지 제작을 통한 서버 구현(박대복)</p>
+    </div>
+
+    <div class="detail-block">
+      <h3>Terraform (IaC)</h3>
+      <p>코트를 통한 인프라 아키텍처 제작 (장경진)</p>
+    </div>
+
+    <div class="detail-block">
+      <h3>CI/CD 파이프라인</h3>
+      <p>GitHub repo에 파일 업로드 및 수정 시 자동 배포가 가능하도록 파이프라인 설계 (장경진)</p>
+    </div>
+
+    <div class="detail-block">
+      <h3>PPT 제작 및 프로젝트 서류화</h3>
+      <p>발표자료(PPT) 제작 및 프로젝트 문서화 (장경진)</p>
+    </div>
+
+    <h2> 비용 분석</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <strong>테스트 비용</strong>
+        <p>일일: ~$2.68 / 중지 상태: ~ $0.5/일일</p>
+      </div>
+      <div class="feature-item">
+        <strong>월 비용 (일 24시간 기준)</strong>
+        <p>$89/월</p>
+      </div>
+    </div>
+
+    <div class="page-number">2 / 2</div>
+  </div>
+
+</div>
+
+</body>
+</html>
