@@ -3,53 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>AWS 개념 플래시카드</title>
-  <link rel="stylesheet" href="flashcard.css">
+  <link rel="stylesheet" href="../init/reset.css">
   <link rel="stylesheet" href="../init/_colors.css">
+  <link rel="stylesheet" href="flashcard.css">
 </head>
 <body>
-  <div class="container">
+  <div id="container">
 
-    <header class="header">
-      <div class="header_div">
-        <p>AWS 개념 플래시카드</p>
+    <header id="header">
+      <div id="header_div">
+        <p>AWS 자격증 훈련 사이트</p>
       </div>
     </header>
 
-    <nav class="nav">
-      <div class="nav_div">
-        <ul class="nav_ul_item">
-          <li class="nav_li_items"><a href="../mainPage/mainPage.html">메인</a></li>
-          <li class="nav_li_items"><a href="../sampleQuestions/">기출문제</a></li>
-          <li class="nav_li_items"><a href="../wordTest/flashcard.html">단어테스트</a></li>
-          <li class="nav_li_items"><a href="https://aws.amazon.com/ko/certification/certification-prep/testing/">시험예약</a></li>
-          <li class="nav_li_items"><a href="discount.html">할인</a></li>
-          <li class="nav_li_items"><a href="support.html">고객센터</a></li>
-          <li class="nav_li_items"><a href="../login/login.html">로그인</a></li>
+    <nav id="nav">
+      <div id="nav_div">
+        <ul id="nav_ul_item">
+          <li class="nav_li_items"><a class="nav_a_items" href="../mainPage/mainPage.html">메인</a></li>
+          <li class="nav_li_items"><a class="nav_a_items" href="../sampleQuestions/sampleQuestions.html">기출문제</a></li>
+          <li class="nav_li_items"><a class="nav_a_items" href="../wordTest/flashcard.html">단어테스트</a></li>
+          <li class="nav_li_items"><a class="nav_a_items" href="../examReservation/examReservation.html">시험예약안내</a></li>
+          <li class="nav_li_items"><a class="nav_a_items" href="../discount/discount.html">할인</a></li>
+          <li class="nav_li_items"><a class="nav_a_items" href="../customerService/customerService.html">고객센터</a></li>
+          <li class="nav_li_items"><a class="nav_a_items" href="../login/login.html">로그인</a></li>
         </ul>
       </div>
     </nav>
     
-    <section class="section">
-      <div class="section_card">
-        <div class="face front">
-          <h2 class="question">이 서비스는 무엇일까요?</h2>
-        </div>
-        <div class="face back">
-          <h2 class="answer"></h2>
+    <section id="section">
+      <div id="flip_on">
+        <div id="section_card">
+
+          <div id="face front">
+            <h2 id="question">이 서비스는 무엇일까요?</h2>
+          </div>
+
+          <div id="face back">
+            <h2 id="answer"></h2>
+          </div>
+
         </div>
       </div>
 
-      <div class="section_btn">
-        <div class="controls">
-          <button class="prevBtn">◀ 이전</button>
-          <button class="flipBtn">정답 보기</button>
-          <button class="nextBtn">다음 ▶</button>
+      <div id="section_btn">
+        <div id="controls">
+          <button class="controls_btn">◀ 이전</button>
+          <button class="controls_btn">정답 보기</button>
+          <button class="controls_btn">다음 ▶</button>
         </div>
       </div>
+
     </section>
 
-    <footer class="footer">
-      <div class="footer_div">
+    <footer id="footer">
+      <div id="footer_div">
         <p>Copyright © 2025 [team: ExamForge]</p>        
       </div>
     </footer>

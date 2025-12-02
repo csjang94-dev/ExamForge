@@ -23,11 +23,7 @@ body {
 #section { grid-area: section; }
 #footer { grid-area: footer; }
 
-body {
-  background: var(--bg-body);
-  color: var(--text-body);
-}
-
+/* header style */
 header{
   align-content: center;
   background-color: var(--bg-header);
@@ -38,6 +34,7 @@ header{
   padding: 1rem;
 }
 
+/* nav style */
 nav {
   align-content: center;
   background-color: var(--bg-nav);
@@ -65,49 +62,52 @@ nav {
   text-decoration: none;
 }
 
+/* section style */
 section{
   display: flex;
-  flex-direction: column;
   background-color: var(--bg-section);
   color: var(--text-section);
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-#section_card{
+#section_div
+{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 40rem;
-  height: 20rem;
-  background: var(--bg-card);
-  border-radius: 1rem;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: transform 0.5s;
-  transform: rotateY(0deg);
+  align-items: center;
+  padding: 2rem;
+  height: 90%;
+  width: 85%;
+  background-color: rgb(241, 234, 234) ;
+  border-radius: 2%;
+  opacity: 80%;
 }
 
-#controls {
-  margin-top: 2rem;
+#section_title{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 3rem;
+  color: var(--text-section);
+}
+.section_contents, .section_contents a{
+  padding-bottom: 0.5rem;
+  color: var(--text-section);
+  overflow: hidden;
 }
 
-.controls_btn {
-  margin: 0 1rem;
-  padding: 0.7rem 2rem;
-  border: none;
-  border-radius: 8px;
-  background: var(--bg-header);
-  color: var(--text-header);
-  font-size: 1rem;
-  cursor: pointer;
+.section_img{
+  padding-top: 1rem;
+  width: 70vw;
+  height: 60vh;
 }
 
-.controls_btn:hover {
-  background: var(--hover-btn);
-  color: var(--hover-btn-text);
+#section_a{
+  text-decoration: none;
 }
+
 
 footer{
   padding: 0.5rem 0;
