@@ -67,16 +67,12 @@ section{
   background-color: var(--bg-section);
   color: var(--text-section);
   align-content: center;
-  text-align: center;
+  text-align: start;
 }
 
-#section_title{
-  padding: 3rem;
+#questions{
+  padding: 5rem 0;
 }
-.section_contents{
-  padding: 0.5rem;
-}
-
 
 footer{
   padding: 0.5rem 0;
