@@ -81,8 +81,8 @@ section{
   align-items: start;
   padding: 2rem;
   width: 70%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 2%;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+  border-radius: 40px;
 }
 
 #section_title{
@@ -100,7 +100,7 @@ section{
 }
 
 .section_contents_text, .section_contents_tag{
-  padding-bottom: 1%;
+  padding: 1% 2.5% ;
   color: var(--text-section);
 }
 

@@ -5,7 +5,7 @@
   <title>AWS 개념 플래시카드</title>
   <link rel="stylesheet" href="/init/reset.css">
   <link rel="stylesheet" href="/init/_colors.css">
-  <link rel="stylesheet" href="flashcard.css">
+  <link rel="stylesheet" href="wordTest.css">
 </head>
 <body>
   <div id="container">
@@ -31,25 +31,21 @@
     </nav>
     
     <section id="section">
-      <div id="flip_on">
-        <div id="section_card">
-
-          <div id="face front">
-            <h2 id="question">이 서비스는 무엇일까요?</h2>
-          </div>
-
-          <div id="face back">
-            <h2 id="answer"></h2>
-          </div>
-
-        </div>
+      <div id="number">1 / 23</div>
+      <div id="section_card">
+        
+        <h2 id="question">이 서비스는 무엇일까요?</h2>
+        <div id="words_description" class="hidden">문제</div>
+        <div id="words_answer" class="hidden">정답</div>
+          
       </div>
+    
 
       <div id="section_btn">
         <div id="controls">
-          <button class="controls_btn">◀ 이전</button>
-          <button class="controls_btn">정답 보기</button>
-          <button class="controls_btn">다음 ▶</button>
+          <button id="controls_pre_btn" class="controls_btn">◀ 이전</button>
+          <button id="controls_answer_btn" class="controls_btn">정답 보기</button>
+          <button id="controls_aft_btn" class="controls_btn">다음 ▶</button>
         </div>
       </div>
 
@@ -62,6 +58,6 @@
     </footer>
     
   </div>
-  <script src="flashcard.js"></script>
+  <script src="wordTest.js"></script>
 </body>
 </html>

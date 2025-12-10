@@ -1,10 +1,10 @@
-async function fetchQuestionsAndRender() {
+async function fetchSampleQuestionsRender() {
     try {
         // 서버의 API 엔드포인트로 Fetch 요청
-        const response = await fetch('/sampleQuestions/api/questions'); 
+        const b = await fetch('/sampleQuestions/api/questions'); 
         
         // 응답을 JSON 형식으로 파싱
-        const questions = await response.json(); 
+        const questions = await b.json(); 
 
         const questions_container = document.getElementById('questions');
         
@@ -26,4 +26,4 @@ async function fetchQuestionsAndRender() {
     }
 }
 
-fetchQuestionsAndRender();
+fetchSampleQuestionsRender();

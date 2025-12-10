@@ -25,7 +25,7 @@ app.get('/sampleQuestions', (req, res) => {
 });
 
 app.get('/wordTest', (req, res) => {
-    res.sendFile(path.join(__dirname, 'wordTest', 'flashcard.html'));
+    res.sendFile(path.join(__dirname, 'wordTest', 'wordTest.html'));
 });
 
 app.get('/examReservation', (req, res) => {
@@ -56,6 +56,17 @@ app.get('/sampleQuestions/api/questions', async(req, res) => {
     }
 });
 
+app.get('/wordTest/api/words', async(req, res) => {
+    try{
+        const data = await fs.readFile(path.join(__dirname, 'wordTest', 'wordTest.json'));
+        const words = JSON.parse(data);
+        res.json(words);
+    }
+    catch(error){
+        console.error('파일 읽기 오류:', error);
+        res.status(500).send('서버 오류: 문제 파일을 불러오는데 실패했습니다.')
+    }
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

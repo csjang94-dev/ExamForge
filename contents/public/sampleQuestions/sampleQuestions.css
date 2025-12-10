@@ -70,8 +70,16 @@ section{
   text-align: start;
 }
 
+#section_div{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #questions{
   padding: 5rem 0;
+  width: 70%;
 }
 
 footer{
